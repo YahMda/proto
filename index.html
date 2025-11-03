@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Komang Mada — Portofolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Navigasi -->
+    <header>
+      <div class="nav">
+        <div class="brand">
+          <div>
+            <h1>Komang Mada</h1>
+            <div class="subtitle">Frontend • IoT • ML</div>
+          </div>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#porto">Porto</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="right-nav">
+          <a class="cta" href="#contact">Contact</a>
+          <button class="menu-btn" id="menuBtn">☰</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- HOME -->
+      <section id="home" class="hero">
+        <div class="card intro">
+          <h2>Komang Mada Maha Putra Wilwatikta</h2>
+          <p>Mahasiswa Sarjana Sistem Komputer di ITB STIKOM Bali — antusias di bidang Machine Learning, Internet of Things (IoT), dan Pengembangan Web. IPK 3.50.</p>
+          <div class="meta">
+            <div class="pill">IPK 3.50</div>
+            <div class="pill">Sistem Komputer</div>
+            <div class="pill">Bali</div>
+          </div>
+          <div class="links">
+            <a class="download" href="https://drive.google.com/file/d/1rw5arS5h0_l7aQMLUnQ2-VQv9G6BBRjV/view?usp=sharing" target="_blank">Download CV (PDF)</a>
+            <a class="download" href="mailto:komangmadamaha12@gmail.com">Email</a>
+          </div>
+        </div>
+
+        <aside class="photo-box card">
+          <img src="foto-komang.jpg" alt="Foto Komang Mada" class="profile-photo">
+        </aside>
+      </section>
+
+      <!-- PORTOFOLIO -->
+      <section id="porto">
+        <h2>Portofolio</h2>
+        <div class="projects">
+          <article class="project card">
+            <h3><a href="project1.html">Analisis Kelayakan Air untuk Pertanian (Machine Learning)</a></h3>
+            <p>Proyek Juli 2025 — preprocessing data, normalisasi, pembagian data latih & uji, evaluasi model menggunakan F1-Score.</p>
+            <div class="tags">
+              <span class="tag">Python</span>
+              <span class="tag">Machine Learning</span>
+              <span class="tag">Random Forest</span>
+              <span class="tag">Data Analysis</span>
+            </div>
+          </article>
+
+          <article class="project card">
+            <h3><a href="project2.html">Microcontroller Programming (Arduino)</a></h3>
+            <p>Pelatihan penggunaan Arduino untuk kontrol perangkat dan otomasi berbasis IoT.</p>
+            <div class="tags">
+              <span class="tag">Arduino</span>
+              <span class="tag">IoT</span>
+              <span class="tag">Hardware</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact">
+        <h2>Contact</h2>
+        <div class="contact-grid">
+          <div class="contact-card card">
+            <h3>Hubungi Saya</h3>
+            <p>Email: <a href="mailto:komangmadamaha12@gmail.com">komangmadamaha12@gmail.com</a></p>
+            <p>Phone: <a href="tel:+62881037193227">+62 881037193227</a></p>
+          </div>
+
+          <div class="contact-card card">
+            <h3>Quick Bio</h3>
+            <p>Mahasiswa aktif program Sarjana Sistem Komputer dengan minat pada ML, IoT, dan Web Development. Aktif di Kelompok Studi Linux (Koordinator Humas 2023–2025).</p>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        © 2025 Komang Mada 
+      </footer>
+    </main>
+  </div>
+
+  <!-- Menu Mobile -->
+  <div id="mobileMenu" class="mobile-menu">
+    <div class="inner">
+      <button id="closeMenu">✕</button>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#porto">Porto</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
