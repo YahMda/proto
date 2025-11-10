@@ -1,54 +1,59 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Project Detail — Microcontroller Programming (Arduino)</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Detail Project — IoT Palang Pintu Otomatis</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="container">
-    <header>
-      <div class="nav">
-        <div class="brand">
-          <h1>Project Detail</h1>
-        </div>
-        <a class="cta" href="index.html#porto">← Kembali</a>
-      </div>
-    </header>
+  <header class="nav-wrap">
+    <nav class="navbar container">
+      <div class="brand">Komang Mada</div>
+      <ul class="nav-links">
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#experience">Pengalaman</a></li>
+        <li><a href="index.html#projects">Project</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-      <section class="card" style="margin-top:24px">
-        <h2>Microcontroller Programming (Arduino) — Proyek #2</h2>
-        <p><strong>Tanggal:</strong>2023</p>
-        <p><strong>Deskripsi:</strong></p>
+  <main class="section project-detail">
+    <div class="container">
+      <h1>IoT Palang Pintu Otomatis untuk Toko</h1>
+      <p><strong>Mei 2025</strong></p>
+
+      <section class="project-overview">
+        <h2>Deskripsi</h2>
         <p>
-          Proyek ini menggunakan platform Tinkercad untuk merancang dan mensimulasikan rangkaian dengan Arduino,
-          bertujuan untuk mengontrol perangkat dan otomasi sederhana sebagai bagian dari sistem IoT.
+          Sistem IoT berbasis ESP32 untuk mengontrol palang pintu toko secara otomatis.
+          Sensor ultrasonik mendeteksi kendaraan masuk, dan servo motor membuka palang.
+          Data dikirim ke web dashboard untuk monitoring jarak dan status pintu secara real-time.
         </p>
 
-        <p><strong>Link Proyek Tinkercad:</strong></p>
-        <p>
-          <a href="https://www.tinkercad.com/things/b7Dgnycus9Y-terrific-turing"
-             target="_blank" style="color:var(--accent)">
-            Tinkercad: Terrific Turing
-          </a>
-        </p>
+        <h3>Komponen</h3>
+        <ul>
+          <li>ESP32</li>
+          <li>Sensor Ultrasonik HC-SR04</li>
+          <li>Servo Motor</li>
+          <li>WiFi Module (built-in)</li>
+          <li>Web Dashboard HTML, CSS, JS</li>
+        </ul>
 
-        <div class="tags" style="margin-top:10px">
-          <span class="tag">Arduino</span>
-          <span class="tag">IoT</span>
-          <span class="tag">Simulation</span>
-          <span class="tag">Tinkercad</span>
-        </div>
+        <h3>Fitur</h3>
+        <ul>
+          <li>Palang otomatis ketika kendaraan terdeteksi</li>
+          <li>Kontrol manual via website</li>
+          <li>Monitoring real-time melalui WiFi</li>
+        </ul>
 
-        <a href="index.html#porto" class="download">← Kembali ke Portofolio</a>
+        <a class="btn" href="index.html">Kembali</a>
       </section>
-    </main>
+    </div>
+  </main>
 
-    <footer>
-      © 2025 Komang Mada — Detail Proyek Arduino IoT
-    </footer>
-  </div>
+  <script src="js/script.js"></script>
 </body>
 </html>

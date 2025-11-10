@@ -1,0 +1,389 @@
+:root {
+  --bg: #05060a; /* near black */
+  --panel: #0b1220;
+  --accent: #00e6ff; /* cyan neon */
+  --accent-2: #6a5cff; /* violet */
+  --muted: #9aa4b2;
+  --glass: rgba(255, 255, 255, 0.04);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg, var(--bg) 0%, #071020 100%);
+  color: #dbe9ff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 60px; /* memberi ruang kiri-kanan */
+}
+
+/* ===================== NAVBAR ===================== */
+.nav-wrap {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 60;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 0;
+  backdrop-filter: blur(6px);
+}
+
+.brand {
+  font-weight: 800;
+  letter-spacing: 0.6px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  color: var(--muted);
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+
+/* ===================== HERO PARALLAX ===================== */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Menengahkan konten secara horizontal */
+  text-align: left;
+  overflow: hidden;
+}
+
+.parallax.layer {
+  position: absolute;
+  inset: 0;
+  transform: translateZ(0);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.parallax.back {
+  background-image: radial-gradient(circle at 10% 20%, rgba(106, 92, 255, 0.06), transparent 8%),
+    radial-gradient(circle at 90% 80%, rgba(0, 230, 255, 0.04), transparent 12%);
+}
+
+.parallax.mid {
+  background-image: linear-gradient(120deg, rgba(106, 92, 255, 0.02), rgba(0, 230, 255, 0.02));
+  mix-blend-mode: overlay;
+}
+
+.parallax.front {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.hero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* posisi tengah */
+  gap: 80px;
+  padding: 120px 0;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.hero-text {
+  flex: 1;
+  text-align: left;
+  max-width: 600px;
+}
+
+.hero-text h1 {
+  font-size: 40px;
+  line-height: 1.2;
+  margin-bottom: 14px;
+}
+
+.hero-text h1 span {
+  display: block;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.hero-text p {
+  color: var(--muted);
+  margin-bottom: 20px;
+  max-width: 55ch;
+}
+
+.hero-photo {
+  flex-shrink: 0;
+  width: 260px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-photo img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 2px solid rgba(0, 230, 255, 0.12);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* ===================== BUTTON ===================== */
+.btn {
+  display: inline-block;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  color: #041021;
+  padding: 10px 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  margin-top: 12px;
+  transition: transform 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn.outline {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  color: var(--accent);
+}
+
+/* ===================== SECTIONS ===================== */
+.section {
+  padding: 80px 0;
+}
+
+.section.dark {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.01), transparent);
+}
+
+.section-title {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: var(--accent-2);
+}
+
+/* ===================== EXPERIENCE & PROJECTS ===================== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+  padding: 18px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.card h3 {
+  margin: 0 0 8px;
+}
+
+.card p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.project-card {
+  background: var(--panel);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.project-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.project-body {
+  padding: 14px;
+}
+
+.project-body h3 {
+  margin: 0 0 8px;
+}
+
+.project-body p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* ===================== CONTACT ===================== */
+.contact-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.contact-card {
+  background: var(--panel);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.contact-card .socials {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.contact-card .socials a {
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.02);
+  text-decoration: none;
+  color: var(--accent);
+}
+
+.contact-form {
+  background: transparent;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--muted);
+}
+
+/* ===================== FOOTER ===================== */
+.site-footer {
+  padding: 24px 0;
+  text-align: center;
+  color: var(--muted);
+  border-top: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 880px) {
+  .container {
+    padding: 0 30px;
+  }
+
+  .hero-inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+    padding: 100px 20px;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
+  .hero-photo {
+    width: 160px;
+  }
+
+  .hero-photo img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .contact-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+}
+
+/* ===================== ANIMASI FADE-UP ===================== */
+.fade-up {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: all 650ms cubic-bezier(0.2, 0.9, 0.2, 1);
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: none;
+}
+/* ===================== ANIMASI PARALLAX ===================== */
+
+.parallax.layer {
+  z-index: 0;
+}
+
+.parallax.front {
+  z-index: 1;
+}
+
+.hero {
+  overflow: visible;
+}
+.parallax.layer {
+  will-change: transform;
+}
+.parallax.front {
+  position: relative;
+  z-index: 10;
+}

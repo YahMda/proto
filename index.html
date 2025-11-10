@@ -1,120 +1,184 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Komang Mada — Portofolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Komang Mada — Portfolio</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-  <div class="container">
-    <!-- Navigasi -->
-    <header>
-      <div class="nav">
-        <div class="brand">
-          <div>
-            <h1>Komang Mada</h1>
-            <div class="subtitle">Frontend • IoT • ML</div>
-          </div>
-        </div>
-        <nav>
-          <ul>
-            <li><a href="#home" class="active">Home</a></li>
-            <li><a href="#porto">Porto</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-        <div class="right-nav">
-          <a class="cta" href="#contact">Contact</a>
-          <button class="menu-btn" id="menuBtn">☰</button>
-        </div>
-      </div>
-    </header>
-
-    <main>
-      <!-- HOME -->
-      <section id="home" class="hero">
-        <div class="card intro">
-          <h2>Komang Mada Maha Putra Wilwatikta</h2>
-          <p>Mahasiswa Sarjana Sistem Komputer di ITB STIKOM Bali — antusias di bidang Machine Learning, Internet of Things (IoT), dan Pengembangan Web. IPK 3.50.</p>
-          <div class="meta">
-            <div class="pill">IPK 3.50</div>
-            <div class="pill">Sistem Komputer</div>
-            <div class="pill">Bali</div>
-          </div>
-          <div class="links">
-            <a class="download" href="https://drive.google.com/file/d/1rw5arS5h0_l7aQMLUnQ2-VQv9G6BBRjV/view?usp=sharing" target="_blank">Download CV (PDF)</a>
-            <a class="download" href="mailto:komangmadamaha12@gmail.com">Email</a>
-          </div>
-        </div>
-
-        <aside class="photo-box card">
-          <img src="./assets/mada.jpg" alt="" class="profile-photo">
-        </aside>
-      </section>
-
-      <!-- PORTOFOLIO -->
-      <section id="porto">
-        <h2>Portofolio</h2>
-        <div class="projects">
-          <article class="project card">
-            <h3><a href="project1.html">Analisis Kelayakan Air untuk Pertanian (Machine Learning)</a></h3>
-            <p>Proyek Juli 2025 — preprocessing data, normalisasi, pembagian data latih & uji, evaluasi model menggunakan F1-Score.</p>
-            <div class="tags">
-              <span class="tag">Python</span>
-              <span class="tag">Machine Learning</span>
-              <span class="tag">Random Forest</span>
-              <span class="tag">Data Analysis</span>
-            </div>
-          </article>
-
-          <article class="project card">
-            <h3><a href="project2.html">Microcontroller Programming (Arduino)</a></h3>
-            <p>Pelatihan penggunaan Arduino untuk kontrol perangkat dan otomasi berbasis IoT.</p>
-            <div class="tags">
-              <span class="tag">Arduino</span>
-              <span class="tag">IoT</span>
-              <span class="tag">Hardware</span>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <!-- CONTACT -->
-      <section id="contact">
-        <h2>Contact</h2>
-        <div class="contact-grid">
-          <div class="contact-card card">
-            <h3>Hubungi Saya</h3>
-            <p>Email: <a href="mailto:komangmadamaha12@gmail.com">komangmadamaha12@gmail.com</a></p>
-            <p>Phone: <a href="tel:+62881037193227">+62 881037193227</a></p>
-          </div>
-
-          <div class="contact-card card">
-            <h3>Quick Bio</h3>
-            <p>Mahasiswa aktif program Sarjana Sistem Komputer dengan minat pada ML, IoT, dan Web Development. Aktif di Kelompok Studi Linux (Koordinator Humas 2023–2025).</p>
-          </div>
-        </div>
-      </section>
-
-      <footer>
-        © 2025 Komang Mada 
-      </footer>
-    </main>
-  </div>
-
-  <!-- Menu Mobile -->
-  <div id="mobileMenu" class="mobile-menu">
-    <div class="inner">
-      <button id="closeMenu">✕</button>
-      <ul>
+  <!-- NAVBAR -->
+  <header class="nav-wrap">
+    <nav class="navbar container">
+      <div class="brand">Komang Mada</div>
+      <ul class="nav-links">
         <li><a href="#home">Home</a></li>
-        <li><a href="#porto">Porto</a></li>
+        <li><a href="#experience">Pengalaman</a></li>
+        <li><a href="#certifications">Sertifikasi</a></li>
+        <li><a href="#projects">Project</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+      <button class="nav-toggle" aria-label="toggle navigation">☰</button>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section id="home" class="hero">
+      <div class="parallax layer back"></div>
+      <div class="parallax layer mid"></div>
+      <div class="parallax layer front">
+        <div class="container hero-inner fade-up">
+          <div class="hero-text">
+            <h1>Saya Komang Mada<br><span>Mahasiswa Sistem Komputer — IoT · ML · Web</span></h1>
+            <p>
+              Saya Komang Mada Maha Putra Wilwatikta, mahasiswa Sistem Komputer di ITB STIKOM Bali 
+              yang antusias di bidang IoT, Machine Learning, dan Pengembangan Web. 
+              Saya suka menciptakan solusi cerdas berbasis teknologi untuk kehidupan sehari-hari.
+            </p>
+            <div class="hero-cta">
+              <div class="hero-cta">
+  <a class="btn" href="#projects">Lihat Project</a>
+  <a class="btn outline" 
+     href="https://drive.google.com/file/d/1abcdefghijklmno123456789/view?usp=sharing" 
+     target="_blank" 
+     rel="noopener noreferrer">
+    Download CV
+  </a>
+</div>
+            </div>
+          </div>
+          <div class="hero-photo">
+            <img src="images/images.jpg" alt="Foto Komang Mada" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section dark fade-up">
+      <div class="container">
+        <h2 class="section-title">Pengalaman</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Koordinator Hubungan Masyarakat — Kelompok Studi Linux (KSL)</h3>
+            <p>Feb 2023 - Feb 2025. Bertanggung jawab atas kegiatan kehumasan, dokumentasi, dan pengelolaan konten media sosial.</p>
+          </article>
+
+          <article class="card">
+            <h3>Anggota — Kelompok Studi Linux</h3>
+            <p>Jul 2019 - May 2022. Berpartisipasi dalam kegiatan belajar dan workshop mengenai Linux dan jaringan.</p>
+          </article>
+
+          <article class="card">
+            <h3>Pendidikan — ITB STIKOM Bali</h3>
+            <p>Sarjana Ilmu Komputer (Sistem Komputer). IPK: 3.50 - Aktif sejak Aug 2022.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section fade-up">
+      <div class="container">
+        <h2 class="section-title">Project</h2>
+        <div class="project-grid">
+
+          <!-- Project 1 -->
+          <div class="project-card">
+            <img src="images/project1.jpg" alt="Project 1" />
+            <div class="project-body">
+              <h3>Analisis Kelayakan Air untuk Pertanian (Machine Learning)</h3>
+              <p>
+                Juli 2025 — Analisis dataset kualitas air, preprocessing, beberapa model ML
+                (KNN, DecisionTree, RandomForest, Logistic Regression). Hasil: Random Forest terbaik.
+              </p>
+              <a class="btn" href="project1.html">Lihat Detail</a>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card">
+            <img src="images/project2.jpg" alt="Project IoT Palang Pintu" />
+            <div class="project-body">
+              <h3>IoT Palang Pintu Otomatis untuk Toko</h3>
+              <p>
+                Mei 2025 — Sistem IoT menggunakan sensor ultrasonik untuk mendeteksi kendaraan,
+                serta servo motor untuk menggerakkan palang pintu toko secara otomatis.
+                Dilengkapi dashboard web untuk monitoring real-time.
+              </p>
+              <a class="btn" href="project2.html">Lihat Detail</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+<section id="certifications" class="section fade-up">
+  <div class="container">
+    <h2 class="section-title">Sertifikasi</h2>
+    <div class="cards">
+
+      <article class="card">
+        <h3>LSP Informatika — Skema Networking</h3>
+        <p>Sertifikasi profesional di bidang jaringan komputer dan troubleshooting.</p>
+      </article>
+
+      <article class="card">
+        <h3>Microcontroller Programming using Arduino</h3>
+        <p>Pelatihan pemrograman mikrokontroler untuk proyek berbasis IoT dan otomatisasi.</p>
+      </article>
+
+      <article class="card">
+        <h3>Desktop Office Training — Bisma Informatika</h3>
+        <p>Pelatihan penggunaan aplikasi produktivitas seperti Microsoft Word, Excel, dan PowerPoint.</p>
+      </article>
+
     </div>
   </div>
+</section>
 
-  <script src="script.js"></script>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section dark contact-section fade-up">
+      <div class="container contact-inner">
+        <div class="contact-card">
+          <h2>Kontak</h2>
+          <p>Tertarik bekerja sama atau beri masukan? Hubungi saya.</p>
+          <ul class="contact-list">
+            <li><strong>Telepon:</strong> +62 881-0371-93227</li>
+            <li><strong>Email:</strong> <a href="mailto:komangmadamaha12@gmail.com">komangmadamaha12@gmail.com</a></li>
+            <li><strong>Lokasi:</strong> Tedung, Abianbase, Gianyar</li>
+          </ul>
+          <div class="socials">
+            <a href="https://www.instagram.com/komangmada" target="_blank">Instagram</a>
+            <a href="https://www.linkedin.com/in/komangmadamaha" target="_blank">LinkedIn</a>
+            <a href="mailto:komangmadamaha12@gmail.com">Email</a>
+          </div>
+        </div>
+
+        <form class="contact-form" action="#" onsubmit="return false;">
+          <label>Nama</label>
+          <input type="text" placeholder="Nama kamu" />
+          <label>Email</label>
+          <input type="email" placeholder="Email kamu" />
+          <label>Pesan</label>
+          <textarea placeholder="Tulis pesan..."></textarea>
+          <button class="btn" type="submit">Kirim</button>
+        </form>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container">&copy; 2025 Komang Mada Maha Putra Wilwatikta — All rights reserved.</div>
+    </footer>
+  </main>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
